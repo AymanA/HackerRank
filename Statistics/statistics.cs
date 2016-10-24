@@ -9,6 +9,7 @@ namespace HackerRankSolutions.allSolutions.Statistics
     class statistics
     {
         #region Day0_Mean_Median_Mode
+
         //static void Main(string[] args)
         //{
         //    Console.WriteLine("Enter total number of elements :");
@@ -55,7 +56,6 @@ namespace HackerRankSolutions.allSolutions.Statistics
         //{
         //    int count = items.Length;
         //    return ((decimal)items.Sum() / count);
-
         //}
 
 
@@ -145,15 +145,201 @@ namespace HackerRankSolutions.allSolutions.Statistics
 
 
         #region Day0_Weighted_Mean
-        static void Main(String[] args)
-        {
-            /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution */
-        }
+
+        //static void Main(String[] args)
+        //{
+        //    /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution */
+
+        //    int n = int.Parse(Console.ReadLine());
+        //    string[] x = Console.ReadLine().Split(' ');
+        //    double[] X = Array.ConvertAll(x, double.Parse);
+        //    string[] w = Console.ReadLine().Split(' ');
+        //    double[] weights = Array.ConvertAll(w, double.Parse);
+        //    double sum = 0.0;
+        //    double wsum = 0.0;
+        //    for (int i = 0; i < n; i++)
+        //    {
+        //        sum += X[i]* weights[i];
+        //        wsum += weights[i];
+        //    }
+        //    double mw;
+        //    mw =sum/ wsum;
+        //   Console.WriteLine(mw.ToString("0.0"));
+        //}
 
         #endregion
+
+
+        #region Day1_Quartiles
+
+        //static int GetQuartail(int[] a)
+        //{
+
+        //    int count = a.Count();
+
+        //    if (count % 2 != 0)
+        //    {
+        //        int index = (count - 1) / 2;
+        //        //    var t = new {
+        //        //        median =a[index],
+        //        //        index=index
+        //        //};
+
+
+        //        return a[index];
+        //    }
+        //    else
+        //    {
+        //        return (a[(count / 2) - 1] + (a[(count / 2)])) / 2;
+        //    }
+
+        //}
+
+        //static void Main(String[] args)
+        //{
+        //    /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution */
+
+        //    int n = int.Parse(Console.ReadLine());
+        //    string[] x = Console.ReadLine().Split(' ');
+        //    int[] nums = Array.ConvertAll(x, int.Parse);
+        //    int[] frstHalf = new int[nums.Length / 2];
+        //    int[] sndHalf = new int[nums.Length / 2];
+        //    Array.Sort(nums);
+
+        //    if (nums.Length%2==0)
+        //    {
+
+        //        Array.Copy(nums, frstHalf, frstHalf.Length);
+        //        Array.Copy(nums, nums.Length / 2, sndHalf, 0, sndHalf.Length);
+        //    }
+        //    else
+        //    {
+
+        //        Array.Copy(nums, frstHalf, frstHalf.Length);
+        //        Array.Copy(nums, (nums.Length / 2)+1, sndHalf, 0, sndHalf.Length);
+        //    }
+
+        //    //var frstQ = GetQuartail(nums);
+
+        //    Console.WriteLine(GetQuartail(frstHalf));
+        //    Console.WriteLine(GetQuartail(nums));
+        //    Console.WriteLine(GetQuartail(sndHalf));
+
+
+        //}
+
+        #endregion
+
+
+        #region Day1_Interquartile_Range
+
+        //static int GetQuartail(int[] a)
+        //{
+
+        //    int count = a.Count();
+
+        //    if (count%2 != 0)
+        //    {
+        //        int index = (count - 1)/2;
+        //     return a[index];
+        //    }
+        //    else
+        //    {
+        //        return (a[(count/2) - 1] + (a[(count/2)]))/2;
+        //    }
+
+        //}
+
+        //static void Main(String[] args)
+        //{
+        //    /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution */
+
+        //    int n = int.Parse(Console.ReadLine());
+        //    string[] x = Console.ReadLine().Split(' ');
+        //    string[] w = Console.ReadLine().Split(' ');
+        //    int[] nums = Array.ConvertAll(x, int.Parse);
+        //    int[] repeates = Array.ConvertAll(w, int.Parse);
+        //    List<int> myInts = new List<int>();
+        //   for (int i = 0; i < nums.Length; i++)
+        //    {
+        //        for (int j = 0; j < repeates[i]; j++)
+        //        {
+        //            myInts.Add(nums[i]);
+
+        //        }
+
+        //    }
+
+        //   myInts.Sort();
+        //    int[] frstHalf = new int[myInts.Count/2];
+        //    int[] sndHalf = new int[myInts.Count/2];
+
+
+        //    if (myInts.Count%2 == 0)
+        //    {
+        //        myInts.CopyTo(0,frstHalf,0, frstHalf.Length);
+        //       myInts.CopyTo(sndHalf.Length, sndHalf, 0, frstHalf.Length);
+
+        //    }
+        //    else
+        //    {
+        //        myInts.CopyTo(0, frstHalf, 0, frstHalf.Length);
+        //      myInts.CopyTo((sndHalf.Length)+1, sndHalf, 0, frstHalf.Length);
+
+        //    }
+
+        //   double Quartail = (GetQuartail(sndHalf) - GetQuartail(frstHalf));
+        //   Console.WriteLine(Quartail.ToString("0.0"));
+        //}
+
+        #endregion
+
+
+        #region Day1_Standard_Deviation
+        //public static decimal getStandardDeviation(int[] a,decimal mean)
+        //{
+        //    decimal sum = 0;
+        //    for (int i = 0; i < a.Length; i++)
+        //    {
+        //        sum += (decimal)Math.Pow((double) (a[i] - mean), 2);
+        //    }
+        //    decimal std = (decimal) Math.Sqrt((double) (sum/a.Length));
+        //    return std;
+        //}
+        //public static decimal getMean(int[] items)
+        //{
+        //    int count = items.Length;
+        //    return ((decimal)items.Sum() / count);
+        //}
+        //static void Main(String[] args)
+        //{
+        //    /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution */
+
+        //    int n = int.Parse(Console.ReadLine());
+        //    string[] x = Console.ReadLine().Split(' ');
+        //    int[] nums = Array.ConvertAll(x, int.Parse);
+        //    decimal mean = getMean(nums);
+        //    Console.WriteLine(getStandardDeviation(nums,mean).ToString("0.0"));
+        //}
+
+
+        #endregion
+
+
     }
 }
 /*
  11
 64630 11735 14216 99233 14470 4978 73429 38120 51135 67060 54545
+*/
+
+/*
+3
+1 3 5
+2 4 6
+*/
+
+/*
+12
+4 17 7 14 18 12 3 16 10 4 4 12
 */
