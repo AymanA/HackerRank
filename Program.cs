@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Text.RegularExpressions;
+
 namespace HackerRankSolutions
 {
     class Program
@@ -877,6 +879,178 @@ namespace HackerRankSolutions
         //    Console.WriteLine(fine);
 
         //}
+
+        #endregion
+
+
+        #region Day27_Testing
+
+        //static void Main(string[] args)
+        //{
+        //    Console.WriteLine("5");
+
+        //    Console.WriteLine("4 3");           //YES
+        //    Console.WriteLine("-1 3 0 2");
+
+        //    Console.WriteLine("5 1");           //NO
+        //    Console.WriteLine("0 -1 2 1 4");
+
+        //    Console.WriteLine("8 3");           //YES
+        //    Console.WriteLine("-3 0 2 3 4 5 6 7");
+
+        //    Console.WriteLine("7 5");           //NO
+        //    Console.WriteLine("0 -1 -3 -4 -2 3 4 ");
+
+        //    Console.WriteLine("6 4");           //YES
+        //    Console.WriteLine("-1 0 4 2 9 10");
+        //}
+
+        #endregion
+
+
+        #region Day28_RegEx,Patterns,and_Intro_to_Databases 
+
+        //solution1
+        //static void Main(String[] args)
+        //{
+        //    int N = Convert.ToInt32(Console.ReadLine());
+
+        //    List<string> names = new List<string>();
+
+        //    for (int a0 = 0; a0 < N; a0++)
+        //    {
+        //        string[] tokens_firstName = Console.ReadLine().Split(' ');
+        //        string firstName = tokens_firstName[0];
+        //        string emailID = tokens_firstName[1];
+
+        //        string pattern = @"@gmail.com$";
+        //        Match match = Regex.Match(emailID, pattern);
+
+        //        if (match.Success) { names.Add(firstName); }
+        //    }
+
+        //    names.Sort();
+
+        //    foreach (string name in names) { Console.WriteLine(name); }
+        //}
+
+        //solution1 optimized
+        //static void Main(String[] args)
+        //{
+        //    int N = Convert.ToInt32(Console.ReadLine());
+
+        //    List<string> names = new List<string>();
+        //    string pattern = @"@gmail.com$";
+        //    for (int a0 = 0; a0 < N; a0++)
+        //    {
+        //        string[] tokens_firstName = Console.ReadLine().Split(' ');
+        //        string firstName = tokens_firstName[0];
+        //        string emailID = tokens_firstName[1];
+
+
+        //        Match match = Regex.Match(emailID, pattern);
+
+        //        if (match.Success) { names.Add(firstName); }
+        //    }
+
+        //    names.Sort();
+
+        //    foreach (string name in names) { Console.WriteLine(name); }
+        //}
+
+        //solution2
+        //static void Main(String[] args)
+        //{
+        //    List<string> gmailUsers = new List<string>();
+
+        //    int N = Convert.ToInt32(Console.ReadLine());
+        //    for (int a0 = 0; a0 < N; a0++)
+        //    {
+        //        string[] tokens_firstName = Console.ReadLine().Split(' ');
+        //        string firstName = tokens_firstName[0];
+        //        string emailID = tokens_firstName[1];
+
+        //        if (emailID.Contains("@gmail.com"))
+        //        {
+        //            gmailUsers.Add(firstName);
+        //        }
+        //    }
+
+        //    gmailUsers.Sort();
+        //    foreach (string user in gmailUsers)
+        //    {
+        //        Console.WriteLine(user);
+        //    }
+
+        //}
+
+
+        //solution3 using Linq
+        //static void Main(String[] args)
+        //{
+        //    List<KeyValuePair<string, string>> list = new List<KeyValuePair<string, string>>();
+        //    int N = Convert.ToInt32(Console.ReadLine());
+        //    for (int a0 = 0; a0 < N; a0++)
+        //    {
+        //        string[] tokens_firstName = Console.ReadLine().Split(' ');
+        //        string firstName = tokens_firstName[0];
+        //        string emailID = tokens_firstName[1];
+        //        var element = new KeyValuePair<string, string>(emailID, firstName);
+        //        list.Add(element);
+
+        //    }
+        //    var res = from a in list
+        //              where a.Key.EndsWith("@gmail.com")
+        //              orderby a.Value ascending
+        //              select a.Value;
+        //    foreach (var name in res)
+        //    {
+        //        Console.WriteLine(name);
+        //    }
+        //    Console.ReadKey();
+        //}
+
+        //solution 4
+        //static void Main(String[] args)
+        //{
+        //    int N = Convert.ToInt32(Console.ReadLine());
+        //    List<string> names = new List<string>();
+
+        //    for (int a0 = 0; a0 < N; a0++)
+        //    {
+        //        string[] tokens_firstName = Console.ReadLine().Split(' ');
+        //        string firstName = tokens_firstName[0];
+        //        string emailID = tokens_firstName[1];
+        //        if (emailID.Contains("@gmail.com"))
+        //        {
+        //            names.Add(firstName);
+        //        }
+
+        //    }
+
+        //    names.Sort();
+        //    foreach (var name in names)
+        //    {
+        //        Console.WriteLine(name);
+        //    }
+        //}
+
+
+        #endregion
+
+
+        #region Day29_Bitwise_AND
+
+        static void Main(String[] args)
+        {
+            int t = Convert.ToInt32(Console.ReadLine());
+            for (int a0 = 0; a0 < t; a0++)
+            {
+                string[] tokens_n = Console.ReadLine().Split(' ');
+                int n = Convert.ToInt32(tokens_n[0]);
+                int k = Convert.ToInt32(tokens_n[1]);
+            }
+        }
 
         #endregion
     }
